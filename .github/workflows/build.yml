@@ -20,6 +20,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: 6.9
+          cache-disabled: true
 
       - name: Build mod jar
         run: gradle build --stacktrace --no-daemon
