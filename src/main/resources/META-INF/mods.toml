@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All Rights Reserved"
+issueTrackerURL="https://github.com/"
+
+[[mods]]
+modId="horrormod"
+version="1.0.0"
+displayName="Horror Countdown"
+authors="You"
+description='''
+Sau 3 ngay Minecraft ke tu khi tao the gioi, mot am thanh kinh di se vang len
+va dong chu "YOU ARE NO LONGER SAFE" se hien thi mau do.
+'''
+
+[[dependencies.horrormod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.horrormod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"

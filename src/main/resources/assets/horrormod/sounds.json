@@ -1,0 +1,11 @@
+{
+  "horror_sting": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "horrormod:horror_sting",
+        "stream": false
+      }
+    ]
+  }
+}
