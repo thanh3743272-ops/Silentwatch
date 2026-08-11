@@ -21,10 +21,10 @@ jobs:
         with:
           gradle-version: 6.9
 
-      - name: Build mod jar (attempt 1, may fail due to known FG bug)
-        run: gradle build --stacktrace --no-daemon || true
+      - name: Pre-create ForgeGradle cache directory (workaround for FG bug)
+        run: mkdir -p ~/.gradle/caches/forge_gradle/mcp_repo/de/oceanlabs/mcp/mcp_config/1.16.5
 
-      - name: Build mod jar (attempt 2, real build)
+      - name: Build mod jar
         run: gradle build --stacktrace --no-daemon
 
       - name: Upload jar artifact
