@@ -20,9 +20,11 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: 6.9
-          cache-disabled: true
 
-      - name: Build mod jar
+      - name: Build mod jar (attempt 1, may fail due to known FG bug)
+        run: gradle build --stacktrace --no-daemon || true
+
+      - name: Build mod jar (attempt 2, real build)
         run: gradle build --stacktrace --no-daemon
 
       - name: Upload jar artifact
